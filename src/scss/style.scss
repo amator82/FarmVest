@@ -1,7 +1,10 @@
+@use 'sass:math';
+@import './base/mixins.scss';
 @import './base/null.scss';
+
 //! <Подключение шрифтов>
-// &display=swap
-@import url('');
+@import url('https://fonts.googleapis.com/css?family=League+Spartan:300,regular,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:regular,500&display=swap');
 @import './base/fonts.scss';
 //! </Подключение шрифтов>
 
@@ -15,11 +18,17 @@
 
 //! <Обнуление, сетка, параметры>
 body {
-    color: #000;
-    font-size: 14px;
+    background-color: #263238;
+    color: $mainColor;
+    font-size: $fontSize;
     font-family: $fontFamily;
-    &._lock{
+    font-weight: 500;
+    ._lock & {
         overflow: hidden;
+        touch-action: none;
+        overscroll-behavior: none;
+    }
+    .loaded & {
     }
 }
 //! </Обнуление, сетка, параметры>
@@ -31,19 +40,56 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    //* Прижимаем footer
+    > main {
+        flex: 1 1 auto;
+    }
+    //* Фикс для слайдеров
+    > * {
+        min-width: 0;
+    }
 }
-._container {
-    max-width: $maxWidthContainer;
+@if ($responsiveType==1) {
+    // Отзывчивая
+    [class*='__container-big'] {
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+            margin: 0 auto;
+        }
+        @if ($containerPadding>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+        }
+    }
+} @else {
+    // По брейк-поинтам
+    [class*='__container'] {
+        margin: 0 auto;
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+        } @else {
+            @if ($containerPadding>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+        @media (max-width: $pc) {
+            max-width: rem(970);
+        }
+        @media (max-width: $tablet) {
+            max-width: rem(750);
+        }
+        @media (max-width: $mobile) {
+            max-width: none;
+            @if ($containerPadding>0 and $maxWidthContainer>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+    }
+}
+[class*='__container'] {
+    max-width: rem(1420);
     margin: 0 auto;
-    @media (max-width: $md1) {
-    }
-    @media (max-width: $md2) {
-    }
-    @media (max-width: $md3) {
-    }
-}
-.page{
-    flex: 1 1 auto;
 }
 //! </Основная сетка>
 

@@ -1,4 +1,4 @@
-._ibg {
+[class*='-ibg'] {
     position: relative;
     img {
         position: absolute;
@@ -7,5 +7,10 @@
         top: 0;
         left: 0;
         object-fit: cover;
+    }
+}
+[class*='-ibg_contain'] {
+    img {
+        object-fit: contain;
     }
 }
