@@ -1,6 +1,5 @@
 @use 'sass:math';
 @import './base/mixins.scss';
-@import './base/null.scss';
 
 //! <Подключение шрифтов>
 @import url('https://fonts.googleapis.com/css?family=League+Spartan:300,regular,500,600,700&display=swap');
@@ -15,6 +14,7 @@
 //! <Переменные>
 @import './base/variables.scss';
 //! </Переменные>
+@import './base/null.scss';
 
 //! <Обнуление, сетка, параметры>
 body {
@@ -48,6 +48,10 @@ body {
     > * {
         min-width: 0;
     }
+}
+[class*='__container'] {
+    max-width: rem(1420);
+    margin: 0 auto;
 }
 @if ($responsiveType==1) {
     // Отзывчивая
@@ -87,11 +91,9 @@ body {
         }
     }
 }
-[class*='__container'] {
-    max-width: rem(1420);
-    margin: 0 auto;
-}
 //! </Основная сетка>
+
+@import './forms/forms.scss';
 
 //! <Подключение блоков>
 @import './base/ui.scss';
