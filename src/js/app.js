@@ -1,9 +1,6 @@
-import * as flsFunctions from './modules/functions.js'
+import * as mtrFunctions from './modules/functions.js'
 
-flsFunctions.isWebp()
-// Подключение меню бургер
-// flsFunctions.menuInit()
+mtrFunctions.isWebp()
+mtrFunctions.menuInit()
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
-
-// const swiper = new Swiper ()
+import './libs/dynamic_adapt.js'
