@@ -1,0 +1,16 @@
+.title {
+    font-weight: 600;
+    line-height: math.div(65, 70);
+    color: #fff;
+    @include adaptiveValue('font-size', 70, 45);
+    span {
+        color: $mainGreen;
+    }
+}
+
+.form {
+    &__input {
+    }
+    &__button {
+    }
+}

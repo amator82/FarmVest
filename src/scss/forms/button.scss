@@ -1,12 +1,14 @@
 .button {
     display: inline-block;
-    // height: 64px;
     font-family: $ffLato;
     padding: rem(21) rem(25);
     line-height: math.div(22, 18);
     background-color: $mainGreen;
     border-radius: rem(10);
     transition: all 0.3s ease 0s;
+    @media (min-width: $tablet) {
+        min-width: rem(142);
+    }
     @media (any-hover: hover) {
         &:hover {
             background-color: #1b8b1b;

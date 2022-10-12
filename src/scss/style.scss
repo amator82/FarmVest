@@ -94,9 +94,9 @@ body {
 //! </Основная сетка>
 
 @import './forms/forms.scss';
+@import './base/common.scss';
 
 //! <Подключение блоков>
 @import './base/ui.scss';
-@import './blocks/header.scss';
-@import './blocks/footer.scss';
+@import './home.scss'
 //! </Подключение блоков>
