@@ -9,6 +9,9 @@
     display: flex;
     padding: rem(6);
     gap: rem(5);
+    @media (max-width:em(430)){
+        flex-direction: column;
+    }
     &__row {
     }
     &__column {
@@ -16,6 +19,7 @@
     &__line {
     }
     &__input {
+        height: rem(64);
         flex: 1 1 auto;
         padding: 0 rem(20);
         color: $mainDark;
