@@ -12,6 +12,8 @@
         position: relative;
     }
     &__content {
+        position: relative;
+        z-index: 2;
         @include adaptiveValue('padding-top', 250, 130);
         @include adaptiveValue('padding-bottom', 200, 30);
         display: flex;
@@ -43,6 +45,9 @@
 }
 .icons-main-block {
     pointer-events: none;
+    @media (max-width: $mobile) {
+        opacity: 0.5;
+    }
     &__item {
         position: absolute;
         &_1 {
