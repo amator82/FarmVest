@@ -4,8 +4,14 @@
     left: 0;
     width: 100%;
     z-index: 50;
+    transition: all 0.3s ease 0s;
     @include adaptiveValue('padding-top', 60, 10);
     @include adaptiveValue('padding-bottom', 60, 10);
+    &._header-scroll {
+        padding-top: rem(20);
+        padding-bottom: rem(20);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
     &__container-big {
         display: grid;
         grid-template-columns: rem(300) 1fr rem(300);
