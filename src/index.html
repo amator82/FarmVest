@@ -5,7 +5,7 @@
             @@include('html/blocks/header.html', {})
             <main class="page">
                 <section class="page__main main-block">
-                    <div class="main-block__container-big">
+                    <div data-prlx-parent class="main-block__container-big">
                         <div class="main-block__container">
                             <div class="main-block__content">
                                 <h1 class="main-block__title title">
@@ -39,7 +39,12 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="main-block__icons icons-main-block">
+                            <div
+                                data-coefficient="100"
+                                data-prlx
+                                data-direction="1"
+                                class="main-block__icons icons-main-block"
+                            >
                                 <div
                                     data-prlx-mouse
                                     data-prlx-cx="300"

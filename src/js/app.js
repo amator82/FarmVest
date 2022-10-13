@@ -4,6 +4,7 @@ mtrFunctions.menuInit()
 
 import './libs/dynamic_adapt.js'
 import './libs/parallax-mouse.js'
+import './libs/parallax.js'
 
 import * as mtrForms from "./modules/forms/forms.js";
 mtrForms.formFieldsInit({ viewPass: false });
