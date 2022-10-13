@@ -4,6 +4,8 @@
 .page {
     &__main {
     }
+    &__partners {
+    }
 }
 .main-block {
     &__container-big {
@@ -103,6 +105,26 @@
         &_7 {
             top: percent(367, 974);
             right: rem(15);
+        }
+    }
+}
+//============================================================//
+.partners {
+    @include adaptiveValue('padding-bottom', 200, 30);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(25);
+        flex-wrap: wrap;
+        @media (max-width: em(1100)) {
+            justify-content: center;
+        }
+    }
+    &__item {
+        text-align: center;
+        img {
+            max-width: 100%;
         }
     }
 }
