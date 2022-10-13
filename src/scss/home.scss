@@ -118,6 +118,8 @@
 //============================================================//
 .partners {
     @include adaptiveValue('padding-bottom', 200, 30);
+    &__container-big {
+    }
     &__container {
         display: flex;
         justify-content: space-between;
@@ -137,6 +139,8 @@
 }
 //============================================================//
 .how {
+    &__container-big {
+    }
     &__container {
         display: grid;
         grid-template-columns: 1fr percent(750, 1420);
