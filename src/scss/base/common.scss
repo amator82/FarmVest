@@ -9,9 +9,6 @@
     &_s64 {
         @include adaptiveValue('font-size', 64, 40);
     }
-    &_s70 {
-        @include adaptiveValue('font-size', 70, 46);
-    }
 }
 .text {
     line-height: 180%;
