@@ -405,12 +405,18 @@
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 48, 30);
         }
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+        }
     }
     &__item {
         flex: 0 1 50%;
     }
     &__button {
         min-width: rem(222);
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
     }
 }
 .item-review {
@@ -418,7 +424,11 @@
     background: rgba(255, 255, 255, 0.05);
     border-radius: rem(20);
     overflow: hidden;
-    &__image {
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+    &__image-ibg {
+        padding-bottom: percent(377, 686);
         flex: 0 0 percent(300, 686);
     }
     &__body {
