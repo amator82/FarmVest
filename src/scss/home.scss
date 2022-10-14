@@ -168,7 +168,6 @@
     &__steps {
     }
     &__image {
-        align-self: start;
     }
 }
 .steps-how {
@@ -222,19 +221,19 @@
         }
     }
     &__image {
-        .image-block__circle{
+        .image-block__circle {
             top: auto;
             right: auto;
             bottom: 0;
             left: 0;
         }
-        .image-block__circle_1{
-            &::before{
+        .image-block__circle_1 {
+            &::before {
                 transform: translate(calc(-50% + rem(18)), 20%);
             }
         }
-        .image-block__circle_2{
-            &::before{
+        .image-block__circle_2 {
+            &::before {
                 transform: translate(calc(-50% + rem(20)), 6%);
             }
         }
@@ -250,4 +249,44 @@
     &__text {
         @include adaptiveValue('margin-bottom', 48, 30);
     }
+    &__spollers {
+        display: grid;
+        gap: rem(24);
+    }
 }
+.spollers-pathway {
+    &__item {
+        border-radius: rem(10);
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    &__title {
+        background-color: transparent;
+        line-height: 177%;
+        font-size: rem(24);
+        width: 100%;
+        display: block;
+        text-align: left;
+        padding: rem(24) rem(30);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &::after {
+            content: '';
+            background: url('../../img/icons/arrow-down.svg') center / 100%
+                no-repeat;
+            flex: 0 0 rem(24);
+            height: rem(24);
+            transition: all 0.3s ease 0s;
+        }
+        &._spoller-active {
+            &::after {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    &__body {
+        padding: rem(0) rem(30) rem(24) rem(30);
+    }
+}
+//============================================================/

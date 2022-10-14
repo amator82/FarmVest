@@ -95,8 +95,9 @@ body {
 
 @import './forms/forms.scss';
 @import './base/common.scss';
+@import './base/spollers.scss';
 
 //! <Подключение блоков>
 @import './base/ui.scss';
-@import './home.scss'
+@import './home.scss'; 
 //! </Подключение блоков>
