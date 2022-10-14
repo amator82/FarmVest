@@ -8,6 +8,8 @@
     }
     &__how {
     }
+    &__pathway {
+    }
 }
 //============================================================//
 .main-block {
@@ -204,5 +206,48 @@
         }
     }
     &__text {
+    }
+}
+//============================================================/
+.pathway {
+    @include adaptiveValue('padding-top', 100, 30);
+    @include adaptiveValue('padding-bottom', 100, 30);
+    &__container-big {
+    }
+    &__container {
+        display: grid;
+        row-gap: rem(30);
+        @media (min-width: $tablet) {
+            grid-template-columns: percent(694, 1420) 1fr;
+        }
+    }
+    &__image {
+        .image-block__circle{
+            top: auto;
+            right: auto;
+            bottom: 0;
+            left: 0;
+        }
+        .image-block__circle_1{
+            &::before{
+                transform: translate(calc(-50% + rem(18)), 20%);
+            }
+        }
+        .image-block__circle_2{
+            &::before{
+                transform: translate(calc(-50% + rem(20)), 6%);
+            }
+        }
+    }
+    &__content {
+        @include adaptiveValue('padding-left', 126, 30, 1420, 992, 2);
+    }
+    &__title {
+        &:not(:last-child) {
+            @include adaptiveValue('margin-bottom', 30, 20);
+        }
+    }
+    &__text {
+        @include adaptiveValue('margin-bottom', 48, 30);
     }
 }
