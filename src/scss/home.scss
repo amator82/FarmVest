@@ -162,10 +162,16 @@
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 30, 20);
         }
+        @media (max-width: $mobileSmall) {
+            text-align: center;
+        }
     }
     &__text {
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 48, 30);
+        }
+        @media (max-width: $mobileSmall) {
+            text-align: center;
         }
     }
     &__steps {
@@ -256,10 +262,16 @@
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 30, 20);
         }
+        @media (max-width: $mobileSmall) {
+            text-align: center;
+        }
     }
     &__text {
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 48, 30);
+        }
+        @media (max-width: $mobileSmall) {
+            text-align: center;
         }
     }
     &__spollers {
@@ -325,6 +337,9 @@
     }
     &__content {
         @include adaptiveValue('padding-right', 177, 30, 1420, 992, 2);
+        @media (max-width: $mobileSmall) {
+            text-align: center;
+        }
     }
     &__title {
         &:not(:last-child) {
