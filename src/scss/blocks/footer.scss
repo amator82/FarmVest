@@ -87,6 +87,11 @@
     }
     &__phone {
         font-size: rem(16);
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 .form-main {
@@ -110,6 +115,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transform: scale(1);
+        @media (any-hover: hover) {
+            img {
+                &:hover {
+                    transition: all 0.3s ease 0s;
+                    transform: scale(1.1);
+                }
+            }
+        }
     }
 }
 .menu-footer {
@@ -124,5 +138,10 @@
     &__link {
         font-size: rem(14);
         line-height: math.div(16, 14);
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }

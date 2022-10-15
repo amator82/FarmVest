@@ -488,6 +488,7 @@
         }
     }
     &__apps {
+        z-index: 2;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
