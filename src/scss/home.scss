@@ -463,6 +463,7 @@
 }
 //============================================================/
 .download {
+    @include adaptiveValue('padding-bottom', 200, 60);
     &__container-big {
     }
     &__container {
