@@ -118,8 +118,8 @@
         transform: scale(1);
         @media (any-hover: hover) {
             img {
+                transition: all 0.3s ease 0s;
                 &:hover {
-                    transition: all 0.3s ease 0s;
                     transform: scale(1.1);
                 }
             }
